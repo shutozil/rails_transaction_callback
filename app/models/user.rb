@@ -10,15 +10,15 @@ class User < ApplicationRecord
   ## :on conditions for after_commit and after_rollback callbacks have to be one of [:create, :destroy, :update]
   ## after_commit は、予約された時にしか呼び出せないようだった
 
-  after_rollback :transfer_point_rollback
-  after_update_commit :transfer_point
+  # after_rollback :transfer_point_rollback
+  # after_update_commit :transfer_point
 
-  def transfer_point_rollback
-    p "ポイントの譲渡に失敗しました。"
-    errors.add(:point, "ポイントの受け渡しに失敗しました。")
-  end
+  # def transfer_point_rollback
+  #   p "ポイントの譲渡に失敗しました。"
+  #   errors.add(:point, "ポイントの受け渡しに失敗しました。")
+  # end
 
-  def transfer_point
-    p "ポイントの譲渡が成功したようです。"
-  end
+  # def transfer_point
+  #   p "ポイントの譲渡が成功したようです。"
+  # end
 end
