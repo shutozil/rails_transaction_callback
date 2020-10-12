@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## jsは適用させていない(スコープ外かつwebpackでエラーが起きるため)
+- `<%# javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>`
